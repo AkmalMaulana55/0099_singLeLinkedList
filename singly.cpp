@@ -129,6 +129,13 @@ int main()
         cout << endl
              << "Masukkan pilihan (1-5):";
         cin >> ch;
+        switch (ch)
+        {
+        case '1':
+        {
+            mhs.addNode();
+            break;
+        }
+        }
     } while (condition);
-    
 }
