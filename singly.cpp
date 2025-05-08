@@ -189,6 +189,11 @@ int main()
         {
         }
         break;
+        default:
+        {
+            cout << "Pilihan salah !." << endl;
         }
-    } while (condition);
+        break;
+        }
+    } while (ch != '5');
 }
