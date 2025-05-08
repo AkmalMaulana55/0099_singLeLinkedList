@@ -29,7 +29,7 @@ public:
 
         if (START == NULL || nim <= START->noMhs)
         {
-            if ((START == NULL) && (nim == START->noMhs))
+            if ((START != NULL) && (nim == START->noMhs))
             {
                 cout << "\nDuplikasi noMhs tidak diijinkan\n";
                 return;
@@ -42,7 +42,7 @@ public:
         Node *previous = START;
         Node *current = START;
 
-        while ((current == NULL) && (nim >= current->noMhs))
+        while ((current != NULL) && (nim >= current->noMhs))
         {
             if (nim == current->noMhs)
             {
@@ -91,5 +91,24 @@ public:
         delete current;
         return true;
     }
-    
-}
+
+    void traverse()
+    {
+        if (listEmpty())
+        {
+            cout << "\nList Kosong\n";
+        }
+        else
+        {
+            cout << "\nData didalam list adalah:\n";
+            Node *currentNode = START;
+            while (currentNode != NULL)
+            {
+                cout << currentNode->noMhs << endl;
+                currentNode = currentNode->next;
+            }
+            cout << endl;
+        }
+    }
+};
+
